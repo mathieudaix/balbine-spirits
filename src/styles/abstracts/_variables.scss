@@ -1,0 +1,80 @@
+// --------------------------------------------------
+// ---------- colors
+// --------------------------------------------------
+
+// ----- background
+$colorBackground-dark: #0f0f0f;
+$colorBackground-white: #dedede;
+
+// ----- text
+$colorText-white: #dedede;
+
+// ----- border
+$colorBorder-white: #dedede;
+
+// --------------------------------------------------
+// ---------- sizes
+// --------------------------------------------------
+
+// ----- typographies
+$size-default: 16px;
+$size-tiny: 2.5vw;
+$size-small: 2vw;
+$size-medium: 1.75vw;
+$size-large: 1.5vw;
+$size-big: 1.25vw;
+$size-huge: 1.15vw;
+$size-enormous: 1.15vw;
+$size-gigantic: 16px;
+$size-colossal: 16px;
+
+// ----- breakpoints
+$from-tiny: 500px;
+$to-tiny: $from-tiny - 1;
+$from-small: 800px;
+$to-small: $from-small - 1;
+$from-medium: 1000px;
+$to-medium: $from-medium - 1;
+$from-large: 1200px;
+$to-large: $from-large - 1;
+$from-big: 1400px;
+$to-big: $from-big - 1;
+$from-huge: 1600px;
+$to-huge: $from-huge - 1;
+$from-enormous: 1800px;
+$to-enormous: $from-enormous - 1;
+$from-gigantic: 2000px;
+$to-gigantic: $from-gigantic - 1;
+$from-colossal: 2400px;
+$to-colossal: $from-colossal - 1;
+
+// --------------------------------------------------
+// ---------- container
+// --------------------------------------------------
+
+// ----- default
+$containerDefault: 90vw;
+$containerDefault-max: 1400px;
+
+// ----- small
+$containerSmall: 90vw;
+$containerSmall-max: 1000px;
+
+// ----- large
+$containerLarge: 90vw;
+$containerLarge-max: 1400px;
+
+// ----- full
+$containerFull: 100vw;
+
+// --------------------------------------------------
+// ---------- animations
+// --------------------------------------------------
+
+// ----- duration
+$speedDefault: 0.6s;
+$speedFast: 0.2s;
+$speedSlow: 1s;
+
+// ----- easing
+$ease: cubic-bezier(0.165, 0.84, 0.44, 1);

@@ -1,0 +1,56 @@
+header {
+	width: 100vw;
+	height: 100vh;
+	min-height: rem(28);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: rem(1);
+	padding: 0 5vw;
+	position: relative;
+	.logo {
+		width: rem(10);
+		margin-bottom: rem(1);
+	}
+	h1,
+	p {
+		text-align: center;
+	}
+	.icon {
+		width: rem(2);
+		height: rem(2);
+	}
+	p {
+		font-family: 'Queens Compressed Light', sans-serif;
+		font-size: rem(1.4);
+	}
+	svg {
+		width: rem(2);
+		height: auto;
+		position: absolute;
+		bottom: rem(2);
+		cursor: pointer;
+		transition: opacity $speedDefault $ease, visibility $speedDefault $ease;
+		path {
+			transform: translateY(-4px);
+			animation: scroll 2s $ease infinite;
+		}
+		&.hide {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateY(-2px);
+	}
+	50% {
+		transform: translateY(2px);
+	}
+	100% {
+		transform: translateY(-2px);
+	}
+}

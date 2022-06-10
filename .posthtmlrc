@@ -1,0 +1,22 @@
+{
+	"plugins": {
+		"posthtml-auto-class": {
+			"scopeNames": [
+				"block"
+			],
+			"aliasNames": {
+				"p": "text",
+				"img": "img",
+				"ul": "list",
+				"li": "item",
+				"a": "link"
+			}
+		},
+		"posthtml-extend": {
+			"root": "src"
+		},
+		"posthtml-include": {
+			"root": "src/includes"
+		}
+	}
+}

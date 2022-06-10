@@ -1,0 +1,127 @@
+.frame {
+	width: 100%;
+	max-width: rem(20);
+	margin-right: auto;
+	margin-left: auto;
+	border: 2px solid $colorBorder-white;
+	position: relative;
+	&_drinks {
+		overflow: hidden;
+	}
+	&_img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: relative;
+		z-index: 1;
+		transition: transform $speedDefault $ease;
+	}
+	&_drink {
+		position: absolute;
+		z-index: 1;
+		&_left {
+			max-width: rem(10);
+			top: 15%;
+			left: -10%;
+			@media (min-width: $from-small) {
+				left: 0;
+			}
+		}
+		&_right {
+			max-width: rem(8);
+			bottom: 15%;
+			right: 0;
+			@media (min-width: $from-small) {
+				right: 25%;
+			}
+		}
+	}
+	&_anim {
+		&:hover {
+			img {
+				transform: translate(rem(2), rem(-2));
+			}
+		}
+	}
+	&_star {
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			width: rem(1.75);
+			height: rem(1.75);
+			background-image: url('../images/star-small.svg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			position: absolute;
+		}
+		&::before {
+			top: rem(0.5);
+			left: rem(0.5);
+		}
+		&::after {
+			bottom: rem(0.5);
+			right: rem(0.5);
+		}
+		&_reverse {
+			&::before {
+				left: auto;
+				right: rem(0.5);
+			}
+			&::after {
+				right: auto;
+				left: rem(0.5);
+			}
+		}
+	}
+	&_dots {
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			width: 50%;
+			height: 50%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			position: absolute;
+		}
+		&::before {
+			background-image: url('../images/dots-top-left.svg');
+			background-position: top left;
+			top: 0;
+			left: 0;
+		}
+		&::after {
+			background-image: url('../images/dots-bottom-right.svg');
+			background-position: bottom right;
+			bottom: 0;
+			right: 0;
+		}
+	}
+	&_noise {
+		&::before {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-image: url('../images/noise.png');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			position: absolute;
+			inset: 0;
+		}
+	}
+}
+
+.color {
+	width: 100%;
+}
+
+.bottle img {
+	display: block;
+	width: 100%;
+	max-width: rem(40);
+	margin: 0 auto;
+}

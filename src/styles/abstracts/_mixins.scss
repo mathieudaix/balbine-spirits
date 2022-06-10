@@ -1,0 +1,31 @@
+// --------------------------------------------------
+// ---------- selectors
+// --------------------------------------------------
+
+// ----- select the first exact child
+@mixin first-child() {
+	&:first-of-type {
+		@content;
+	}
+}
+
+// ----- select the last exact child
+@mixin last-child() {
+	&:last-of-type {
+		@content;
+	}
+}
+
+// ----- select all even children
+@mixin even() {
+	&:nth-of-type(even) {
+		@content;
+	}
+}
+
+// ----- select all odd children
+@mixin odd() {
+	&:nth-of-type(odd) {
+		@content;
+	}
+}

@@ -1,0 +1,71 @@
+@font-face {
+	font-family: 'Queens Compressed Light';
+	src: url('../fonts/queens-compressed-light.eot') format('embedded-opentype'),
+		url('../fonts/queens-compressed-light.woff') format('woff'),
+		url('../fonts/queens-compressed-light.woff2') format('woff2'),
+		url('../fonts/queens-compressed-light.ttf') format('truetype'),
+		url('../fonts/queens-compressed-light.otf') format('opentype'),
+		url('../fonts/queens-compressed-light.svg#queens-compressed-light') format('svg');
+	font-display: swap;
+	font-style: normal;
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/roboto-light.eot') format('embedded-opentype'), url('../fonts/roboto-light.woff') format('woff'),
+		url('../fonts/roboto-light.woff2') format('woff2'), url('../fonts/roboto-light.ttf') format('truetype'),
+		url('../fonts/roboto-light.otf') format('opentype'), url('../fonts/roboto-light.svg#roboto-light') format('svg');
+	font-display: swap;
+	font-style: normal;
+	font-weight: 300;
+}
+
+h1 {
+	font-family: 'Queens Compressed Light', sans-serif;
+	font-size: rem(2);
+	font-weight: 300;
+	text-transform: uppercase;
+	color: $colorText-white;
+}
+
+h2 {
+	font-family: 'Queens Compressed Light', sans-serif;
+	font-size: rem(2);
+	font-weight: 300;
+	text-transform: uppercase;
+	color: $colorText-white;
+	@media (min-width: $from-small) {
+		font-size: rem(3.5);
+	}
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	line-height: 1.4;
+	color: $colorText-white;
+}
+
+.title_frame {
+	margin-bottom: rem(2.5);
+	@media (min-width: $from-small) {
+		margin-bottom: rem(5);
+	}
+	.title_anim {
+		@media (min-width: $from-small) {
+			overflow: hidden;
+			h2 {
+				transform: translateY(100%);
+				transition: transform $speedSlow $ease;
+			}
+		}
+	}
+	@media (min-width: $from-small) {
+		&.is-inview {
+			h2 {
+				transform: translateY(0);
+			}
+		}
+	}
+}

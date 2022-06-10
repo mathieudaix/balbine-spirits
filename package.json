@@ -1,0 +1,33 @@
+{
+	"name": "boilerplate",
+	"version": "1.0.0",
+	"author": "Mathieu Daix",
+	"description": "A boilerplate for front-end websites.",
+	"license": "MIT",
+	"browserslist": "> 0.5%, last 2 versions, not dead",
+	"@parcel/bundler-default": {
+		"minBundles": 1,
+		"minBundleSize": 3000,
+		"maxParallelRequests": 20
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"dev": "parcel src/*.html",
+		"build": "parcel build/*.html"
+	},
+	"devDependencies": {
+		"@parcel/transformer-sass": "2.5.0",
+		"parcel": "^2.5.0",
+		"postcss": "^8.3.11",
+		"posthtml-auto-class": "^0.1.0",
+		"posthtml-extend": "^0.6.2",
+		"posthtml-include": "^1.7.3"
+	},
+	"dependencies": {
+		"@barba/core": "^2.9.7",
+		"gsap": "^3.10.3",
+		"locomotive-scroll": "^4.1.4"
+	}
+}
